@@ -87,7 +87,7 @@ Switch is a layer 3 switch, because it has routing capabilities into it and will
 
 ---
 
-## Firewalls / IDS
+## Firewalls / IDS / IPS
 
 **Firewalls** allow us to stop bad people getting into our network with firewall rules to permit or deny traffic.
 
