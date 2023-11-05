@@ -66,4 +66,53 @@ RFC1918 Addresses
 - for routing like DHL or FexEx routing parcel based on an address
 - routers route traffic to destination address in the packet
 
+**IP Address**
+
+- Network Address Portion (Network ID)
+
+  - identifies a specific network
+  - routers maintain routing tables that contain the network
+  - look at destination of IP address and match to network address
+
+- Host Address Portion (host ID)
+  - identifies a specific endpoint on a network
+  - server, printer, PC, iphone, ipad etc
+
+---
+
+## Address Classes
+
+- 1981 until introduction of classes in Domain routing in 1993
+- divide IPv4 into 5 address classes
+
+Class A, Class B, Class C => Unicast traffic
+
+- Accommodate different sizes of networks
+- Aids in classifying networks
+- support 60 million IP addresses, replaced by CIDR
+- determined by the Internet Assigned Numbers Authority (IANA)
+
+Class D => multicast
+
+Class E => reserved for future or experimental purposes
+
+- IPv6: does not use address classes
+- IPv4: address classes was replaced by CIDR in 1993
+
+### Class A
+
+- first 8 bits: network, last 24 bits: hosts
+- start with a binary 0
+- Binary Range 0.0.0.0 to 127.255.255.255
+- Exception
+  - 127 is reserved for loopback
+  - 0 network is reserved for default network
+- Actual Range: 1.0.0.0 to 126.255.255.255
+
+### Class B
+
+- first 16 bits: network, last 16 bits hosts
+- starts with binary 10 (one & zero not ten)
+- Binary range: 128.0.0.0 to 191.255.255.255
+
 ---
