@@ -4,7 +4,11 @@
 
 - IP Addresses Overview
 - Address Classes
-  - Class A - E
+  - Class A
+  - Class B
+  - Class C
+  - Class D
+  - Class E
   - CIDR
 - Special Address
 
@@ -103,7 +107,7 @@ Class E => reserved for future or experimental purposes
 
 - first 8 bits: network, last 24 bits: host
 - start with a **binary 0**
-- Binary Range 0.0.0.0 to 127.255.255.255
+- Binary Range **0.0.0.0 to 127.255.255.255**
 - Exception
   - 127 is reserved for loopback
   - 0 network is reserved for default network
@@ -113,17 +117,17 @@ Class E => reserved for future or experimental purposes
 
 - first 16 bits: network, last 16 bits host
 - starts with **binary 10**
-- Binary range: 128.0.0.0 to 191.255.255.255
+- Binary range: **128.0.0.0 to 191.255.255.255**
 
 ### Class C
 
 - first 24 bits: network
 - starts with **binary 110**, last 8 bits host
-- Binary range 192.0.0.0 to 223.255.255.255
+- Binary range **192.0.0.0 to 223.255.255.255**
 
 ### Class D
 
-Class A, B,C = Unicast
+Class A, B, C = Unicast
 
 Class D = Multicast
 
@@ -165,5 +169,41 @@ Two hosts can have the same network portion
 - 192.168.1.0 = Network Address
 - 192.168.1.1 = Host Address
 - Class C network 192 to 223
+
+---
+
+## Special Address
+
+### Directed Broadcast Address
+
+- host sends data to all devices on a specific network
+- binary 1s in the entire host portion of the address
+
+Network 172.31.0.0
+
+- directed broadcast = 172.31.255.255
+
+Routers can route directed broadcast
+
+- disabled by default
+
+  - hacking utilities that you can download
+  - Denial of Service Attacks - SMURF
+
+#### Example
+
+172.16.0.1 (Network 172.16.0.0)
+
+-> Step 1: Directed broadcast to 172.31.255.255
+
+-> Router
+
+-> Network 172.31.0.0
+
+-> All hosts (172.31.0.1)
+
+- receive
+- accept
+- forward to higher level protocols for processing
 
 ---
