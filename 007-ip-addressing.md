@@ -5,7 +5,7 @@
 - IP Addresses Overview
 - Address Classes
   - Class A - E
-  - CDR
+  - CIDR
 - Special Address
 
   - loopback address
@@ -28,8 +28,6 @@ RFC1918 Addresses
 - 10.1.1.1
 
 ---
-
-## IP Characteristics and IPv4 Address Format
 
 ### IPv4
 
@@ -55,6 +53,8 @@ RFC1918 Addresses
 **TCP**
 
 - handle dropped corrupted and misdirected packets
+
+---
 
 ### Format Overview
 
@@ -101,8 +101,8 @@ Class E => reserved for future or experimental purposes
 
 ### Class A
 
-- first 8 bits: network, last 24 bits: hosts
-- start with a binary 0
+- first 8 bits: network, last 24 bits: host
+- start with a **binary 0**
 - Binary Range 0.0.0.0 to 127.255.255.255
 - Exception
   - 127 is reserved for loopback
@@ -111,8 +111,59 @@ Class E => reserved for future or experimental purposes
 
 ### Class B
 
-- first 16 bits: network, last 16 bits hosts
-- starts with binary 10 (one & zero not ten)
+- first 16 bits: network, last 16 bits host
+- starts with **binary 10**
 - Binary range: 128.0.0.0 to 191.255.255.255
+
+### Class C
+
+- first 24 bits: network
+- starts with **binary 110**, last 8 bits host
+- Binary range 192.0.0.0 to 223.255.255.255
+
+### Class D
+
+Class A, B,C = Unicast
+
+Class D = Multicast
+
+Is talking to a group of devices rather than 1 to 1 communication.
+
+- multicast
+- starts with **binary 1110**
+- Binary range 224.0.0.0 to 239.255.255.255
+
+### Class E
+
+- starts with **binary 1111**
+- Binary range 240.0.0.0 to 255.255.255.255 (reserved for broadcast)
+
+---
+
+### Class A Network Address
+
+Class A = 8 bits network
+
+- 10.0.0.0 = Network Address
+- 10.1.2.3 = Host Address
+- Class A Networks 1 to 126
+
+Two hosts can have the same network portion
+
+---
+
+### Class B Network Address
+
+- 172.16.0.0 = Network Address
+- 172.16.1.2 = Host Address
+- Class B Networks 128 to 191
+
+---
+
+### Class C Network Address
+
+- 192.168.1.0 = Network Address
+- 192.168.1.1 = Host Address
+- Class C network 192 to 223
 
 ---
