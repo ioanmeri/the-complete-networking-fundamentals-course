@@ -207,3 +207,23 @@ Routers can route directed broadcast
 - forward to higher level protocols for processing
 
 ---
+
+### Local Broadcast Address
+
+- communicate with all devices on local network
+- address is all binary 1s
+  - 11111111.11111111.11111111.11111111
+  - 255.255.255.255
+
+#### Example
+
+- host request an IP address from DHCP server
+
+Host (No IP Address) -> broadcast -> DHCP Server
+
+- DHCP: Dynamic Host Configuration Protocol, provides IP addresses dynamically to devices such as PCs, phones, iPads, IP Telephones.
+
+- always dropped by routers and layer-3 switches (255.255.255.255)
+  - can be override with DHCP forwarding or DHCP relay
+
+---
