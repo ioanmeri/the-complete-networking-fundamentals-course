@@ -246,3 +246,19 @@ Host (No IP Address) -> broadcast -> DHCP Server
 - router or switch may have a Loopback Interface (10.1.1.1/32 vs 127.0.0.1)
 
 ---
+
+### Private Addresses
+
+**RFC** - Request for Comments (IETF)
+
+- Internet Standards
+- RFV1149 - IP over Avian Carriers (humor)
+
+**RFC1918**
+
+- Private IP addresses
+- non routable on the Internet
+
+the exhaustion of IPv4 has postponed for longer
+
+---
