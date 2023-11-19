@@ -254,11 +254,41 @@ Host (No IP Address) -> broadcast -> DHCP Server
 - Internet Standards
 - RFV1149 - IP over Avian Carriers (humor)
 
-**RFC1918**
+#### RFC1918
 
 - Private IP addresses
 - non routable on the Internet
 
 the exhaustion of IPv4 has postponed for longer
+
+Three blocks of IP addresses
+
+- 1 Class A Network
+  - 10.0.0.0 to 10.255.255.255
+- 16 Class B Networks
+  - 172.16.0.0 to 172.31.255.255
+- 256 Class C Networks
+  - 192.168.0.0 to 192.168.255.255
+
+> Will not be accepted by Internet Service Provides (not routed on Internet)
+
+> When sending traffic from an internal address e.g. 10.1.1.1 to google.com, **this IP has to be NATed** (Network Address Translated) **to a public IP address** such as 15.1.1.1.
+
+#### IPv4 Link - Local Addresses
+
+- RFC3927
+  - Automatic Private IP Address (APIPA, Microsoft)
+
+This is for when a PC is configured for DHCP
+
+- when no DHCP server is available
+- - range 169.254.0.0/16
+- allow two computers to communicate when there are no DHCP servers available
+- can immediately communicate without configuration
+- host randomly generate the host specific part of the address
+
+the PC automatically chooses an IP address
+
+Hosts communicate on the local link but their traffic is not routable
 
 ---
