@@ -12,8 +12,8 @@
   - CIDR
 - Special Address
 
-  - loopback address
-  - local broadcast address
+  - Loopback address
+  - Local broadcast address
 
 - Network Masks
 
@@ -172,7 +172,7 @@ Two hosts can have the same network portion
 
 ---
 
-## Special Address
+## Special Addresses
 
 ### Directed Broadcast Address
 
@@ -225,5 +225,24 @@ Host (No IP Address) -> broadcast -> DHCP Server
 
 - always dropped by routers and layer-3 switches (255.255.255.255)
   - can be override with DHCP forwarding or DHCP relay
+
+---
+
+### Local Loopback Address
+
+- used to let a system send a message to itself for testing
+- this is very useful to make sure that the TCP/IP stack is correctly installed on a machine
+- **127**.0.0.1
+  - Class A Address
+  - 16 Million Addresses
+
+#### IPv6
+
+- ::1 (loopback address)
+
+**Note**
+
+- routers have loopback addresses, which are not the same as the local loopback address (**Routers Loopback Address** !== Local Loopback Address)
+- router or switch may have a Loopback Interface (10.1.1.1/32 vs 127.0.0.1)
 
 ---
